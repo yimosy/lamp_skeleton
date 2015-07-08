@@ -9,3 +9,4 @@ chkconfig iptables off
 chkconfig ip6tables off
 cp -p /etc/selinux/config /etc/selinux/config.orig
 sed -i -e "s|^SELINUX=.*|SELINUX=disabled|" /etc/selinux/config
+setenforce 0
