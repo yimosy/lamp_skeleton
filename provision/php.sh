@@ -10,6 +10,7 @@ sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/epel.repo
 yum install -y --enablerepo=epel,remi,remi-php55 php php-cli php-common php-devel php-gd \
 php-intl php-mbstring php-pdo php-mysqlnd php-pear.noarch php-xml php-mcrypt
 
+sed -i -e "s|^;date.timezone =.*|date.timezone = \"Asia/Tokyo\"|" /etc/php.ini
 sed -i 's/display_errors = Off/display_errors = On/' /etc/php.ini
 
 pecl install xdebug > /dev/null 2>&1
