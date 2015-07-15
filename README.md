@@ -1,6 +1,6 @@
 # lamp_skeleton
 
-最低限のPHP開発環境
+最低限のPHP開発環境(お試しsilex版)
 
 ## 環境
 * CentOS 6.6
@@ -12,7 +12,7 @@
 192.168.14.10
 
 ### DocumentRoot
-htdocs/
+webapp/web/
 
 ## 利用方法
 vagrant up
