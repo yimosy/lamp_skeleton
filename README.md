@@ -12,7 +12,7 @@
 192.168.14.10
 
 ### DocumentRoot
-htdocs/
+webapp/web/
 
 ## 利用方法
 vagrant up
