@@ -18,3 +18,11 @@ pecl install xdebug > /dev/null 2>&1
 curl -sS https://getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
 
+# mbstring
+editNUm=`sed -n '/\[mbstring\]/=' /etc/php.ini`
+sed -i -e "${editNUm}a mbstring.detect_order = UTF-8,EUC-JP,SJIS,JIS,ASCII" /etc/php.ini
+sed -i -e "${editNUm}a mbstring.http_output = UTF-8" /etc/php.ini
+sed -i -e "${editNUm}a mbstring.http_input = auto" /etc/php.ini
+sed -i -e "${editNUm}a mbstgring.internal_encoding = UTF-8" /etc/php.ini
+sed -i -e "${editNUm}a default_charset = UTF-8" /etc/php.ini
+sed -i -e "${editNUm}a mbstring.language = Japanese" /etc/php.ini
