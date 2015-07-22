@@ -11,7 +11,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provider :virtualbox do |vb|
 		vb.name = "lamp_skeleton"
 	end
-	
+
+	Encoding.default_external = 'UTF-8'
+
 	config.vm.provision :shell, :path => "provision/first.sh"
 	config.vm.provision :shell, :path => "provision/apache.sh"
 	config.vm.provision :shell, :path => "provision/mysql.sh"
