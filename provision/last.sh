@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cat << _EOT_ > /etc/httpd/conf.d/vhost.conf
 EnableSendfile Off
 EnableMMAP Off
@@ -17,4 +19,5 @@ _EOT_
 
 sed -i -e "/AddType text\/html \.php/i\AddType application\/x-httpd-php \.php \.html" /etc/httpd/conf.d/php.conf
 
+chkconfig httpd on
 service httpd start

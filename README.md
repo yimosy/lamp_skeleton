@@ -1,21 +1,23 @@
 # lamp_skeleton
 
-最低限のPHP開発環境
+WordPressのお試し
 
 ## 環境
 * CentOS 6.6
 * Apache 2
 * PHP 5.5
 * MySQL 5.6
+* wordpress-4.2.4
 
 ### private_network
 192.168.14.10
 
 ### DocumentRoot
-webapp/web/
+webapp/web/wordpress/
 
 ## 利用方法
 vagrant up
+http://192.168.14.10/wp-admin/install.php
 
 ## 参考サイト
 

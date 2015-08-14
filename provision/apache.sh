@@ -14,10 +14,10 @@ cat << _EOT_ >> /etc/httpd/conf/httpd.conf
 DocumentRoot "/var/www/htdocs"
 <Directory "/var/www/htdocs">
   Options Indexes FollowSymLinks
-  AllowOverride None
+  AllowOverride All
   Order allow,deny
   Allow from all
 </Directory>
 _EOT_
 
-ln -snf /var/www/webapp/web /var/www/htdocs
+ln -snf /var/www/webapp/web/wordpress /var/www/htdocs
